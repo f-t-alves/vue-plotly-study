@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <vue-plotly :data="data" :layout="layout" :options="options" />
+    <vue-plotly :data="data1" :layout="layout1" :options="options" />
+    <vue-plotly :data="data2" :layout="layout2" :options="options" />
   </div>
 </template>
 
@@ -14,7 +15,7 @@ export default {
   },
   data() {
     return {
-      data: [
+      data1: [
         {
           values: [20700, 21800, 2300, 25200, 20100, 20800, 19600],
           labels: [
@@ -32,13 +33,15 @@ export default {
           hole: 0.5,
           type: 'pie',
         },
-        {
-          x: [1,2,3,4],
-          y: [10,15,13,17],
-          type:"scatter"
-        }
       ],
-      layout: {
+      data2: [
+        {
+          x: [1, 2, 3, 4],
+          y: [10, 15, 13, 17],
+          type: 'scatter',
+        },
+      ],
+      layout1: {
         title: '',
         annotations: [
           {
@@ -51,20 +54,28 @@ export default {
             y: 0.5,
           },
         ],
-          //   font: {
-          //     size: 20
-          //   },
-          //   showarrow: false,
-          //   text: 'CO2',
-          //   x: 0.82,
-          //   y: 0.5
-          // }
+        height: 600,
+        width: 800,
+        showlegend: true,
+      },
+      layout2: {
+        title: '',
+        annotations: [
+          {
+            font: {
+              size: 20,
+            },
+            showarrow: false,
+            text: 'CO2',
+            x: 0.82,
+            y: 0.5,
+          },
         ],
         height: 600,
         width: 800,
         showlegend: true,
       },
-      options: {}
+      options: { responsive: true },
     };
   },
 };
