@@ -5,32 +5,32 @@
 </template>
 
 <script>
-import VuePlotly from "@statnett/vue-plotly";
+import VuePlotly from '@statnett/vue-plotly';
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    VuePlotly
+    VuePlotly,
   },
-  data: function() {
+  data() {
     return {
       data: [
         {
           values: [20700, 21800, 2300, 25200, 20100, 20800, 19600],
           labels: [
-            "agent",
-            "claims_ins",
-            "claim_own",
-            "claim_pending",
-            "debt_drp",
-            "debt_drp_tax",
-            "debt_vet"
+            'agent',
+            'claims_ins',
+            'claim_own',
+            'claim_pending',
+            'debt_drp',
+            'debt_drp_tax',
+            'debt_vet',
           ],
           domain: { column: 0 },
-          name: "",
-          hoverinfo: "label+percent+value",
+          name: '',
+          hoverinfo: 'label+percent+value',
           hole: 0.5,
-          type: "pie"
+          type: 'pie',
         },
         {
           x: [1,2,3,4],
@@ -39,18 +39,18 @@ export default {
         }
       ],
       layout: {
-        title: "",
+        title: '',
         annotations: [
           {
             font: {
-              size: 32
+              size: 32,
             },
             showarrow: false,
-            text: "Balans",
+            text: 'Balans',
             x: 0.5,
-            y: 0.5
-          }
-          // {
+            y: 0.5,
+          },
+        ],
           //   font: {
           //     size: 20
           //   },
@@ -62,11 +62,11 @@ export default {
         ],
         height: 600,
         width: 800,
-        showlegend: true
+        showlegend: true,
       },
       options: {}
     };
-  }
+  },
 };
 </script>
 
