@@ -23,23 +23,25 @@ export default {
       object: {
         graphs: [
           {
-            data: [{
-              values: [20700, 21800, 2300, 25200, 20100, 20800, 19600],
-              labels: [
-                'agent',
-                'claims_ins',
-                'claim_own',
-                'claim_pending',
-                'debt_drp',
-                'debt_drp_tax',
-                'debt_vet',
-              ],
-              domain: { column: 0 },
-              name: '',
-              hoverinfo: 'label+percent+value',
-              hole: 0.5,
-              type: 'pie',
-            }],
+            data: [
+              {
+                values: [20700, 21800, 2300, 25200, 20100, 20800, 19600],
+                labels: [
+                  'agent',
+                  'claims_ins',
+                  'claim_own',
+                  'claim_pending',
+                  'debt_drp',
+                  'debt_drp_tax',
+                  'debt_vet',
+                ],
+                domain: { column: 0 },
+                name: '',
+                hoverinfo: 'label+percent+value',
+                hole: 0.5,
+                type: 'pie',
+              },
+            ],
             layout: {
               title: '',
               annotations: [
@@ -59,11 +61,13 @@ export default {
             },
           },
           {
-            data: [{
-              x: [1, 2, 3, 4],
-              y: [10, 15, 13, 17],
-              type: 'scatter',
-            }],
+            data: [
+              {
+                x: [1, 2, 3, 4],
+                y: [10, 15, 13, 17],
+                type: 'scatter',
+              },
+            ],
             layout: {
               title: '',
               annotations: [
